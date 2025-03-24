@@ -3,7 +3,7 @@ Offline Notes App built with Vue.js, Pinia, Bulma, and IndexedDB – a simple PW
 
 ---
 
-## 🚀 Tech Stack
+## Tech Stack
 
 | Technology    | Purpose                                            |
 |---------------|----------------------------------------------------|
@@ -15,7 +15,7 @@ Offline Notes App built with Vue.js, Pinia, Bulma, and IndexedDB – a simple PW
 
 ---
 
-## 📦 Project Setup
+## Project Setup
 
 ### 1. Scaffold the Project with Vite + Vue
 
@@ -37,7 +37,7 @@ cd note_taker
 npm install
 ```
 
-> ⚠️ Note: Warning shown about Node version (`v21.7.2`) not matching Vite’s recommended engines. The app still runs normally.
+>  Note: Warning shown about Node version (`v21.7.2`) not matching Vite’s recommended engines. The app still runs normally.
 
 ---
 
@@ -51,13 +51,15 @@ npm run dev
 
 ---
 
-## 👤 Authors
+## Authors
 
 **Stephen Landrigan**  
 GitHub: [@StepheninSchool](https://github.com/StepheninSchool)
 
 **Mai Ibrahim**
-GitHub: [mai please insert your github like above]
+GitHub: 
+[mai please insert your github like above]
 
 **Jacob Poirier**
-GitHub: [Jacob do the same]
+GitHub: 
+[Jacob do the same]
