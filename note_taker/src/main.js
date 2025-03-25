@@ -1,7 +1,8 @@
-import { createApp } from 'vue'
-import './style.css'
-import App from './App.vue'
-import 'bulma/css/bulma.css' // Import Bulma CSS 8:25pm Stephen L
+import { createApp } from 'vue';
+import App from './App.vue';
+import router from './router';
+import 'bulma/css/bulma.min.css';
 
-createApp(App).mount('#app')
-
+const app = createApp(App);
+app.use(router);
+app.mount('#app');
