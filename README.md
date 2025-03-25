@@ -58,7 +58,7 @@ GitHub: [@StepheninSchool](https://github.com/StepheninSchool)
 
 **Mai Ibrahim**
 GitHub: 
-[mai please insert your github like above]
+[@W0496269](https://github.com/W0496269)
 
 **Jacob Poirier**
 GitHub: 
