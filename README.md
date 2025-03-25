@@ -57,8 +57,7 @@ npm run dev
 GitHub: [@StepheninSchool](https://github.com/StepheninSchool)
 
 **Mai Ibrahim**
-GitHub: 
-[@W0496269](https://github.com/W0496269)
+GitHub: [@W0496269](https://github.com/W0496269)
 
 **Jacob Poirier**
 GitHub: 
