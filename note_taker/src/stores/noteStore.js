@@ -1,22 +1,22 @@
 import { defineStore } from 'pinia'
+import { addNoteToDB, getAllNotesFromDB, deleteNoteFromDB } from '../utils/indexedDB';
 
 export const useNoteStore = defineStore('noteStore', {
   state: () => ({
-    // An array to store all notes
     notes: []
   }),
   actions: {
-    // Adds a new note to the state
-    addNote(note) {
-      this.notes.push(note)
+    async addNote(note) {
+      this.notes.push(note);
+      await addNoteToDB(note);
     },
-    // Initializes notes from IndexedDB (or any external data source)
-    loadNotes(notes) {
-      this.notes = notes
+    async loadNotes() {
+      const notes = await getAllNotesFromDB();
+      this.notes = notes;
     },
-    // Optional: Delete a note by its id
-    deleteNote(id) {
-      this.notes = this.notes.filter(note => note.id !== id)
+    async deleteNote(id) {
+      this.notes = this.notes.filter(note => note.id !== id);
+      await deleteNoteFromDB(id);
     },
     // Optional: Update a note by merging new data into the existing note
     updateNote(id, data) {

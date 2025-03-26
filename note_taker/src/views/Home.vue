@@ -10,12 +10,19 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { onMounted } from 'vue';
+import { useNoteStore } from '../stores/noteStore';
+import { storeToRefs } from 'pinia';
 
-const notes = ref([{ id: 1, text: 'Sample Note' }]);
+const noteStore = useNoteStore();
+const { notes } = storeToRefs(noteStore); // Bind notes from the store
 
-const addNote = () => {
-  notes.value.push({ id: notes.value.length + 1, text: 'New Note' });
+const addNote = async () => {
+  const newNote = { id: Date.now(), text: 'New Note' };
+  await noteStore.addNote(newNote); // Save the note to the database
 };
 
+onMounted(async () => {
+  await noteStore.loadNotes(); // Load notes from the database on page load
+});
 </script>
