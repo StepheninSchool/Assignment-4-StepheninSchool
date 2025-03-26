@@ -1,31 +1,35 @@
 import { defineStore } from 'pinia'
 
-// 1. defineStore creates a "store" for your data and logic
 export const useNoteStore = defineStore('noteStore', {
   state: () => ({
-    notes: [
-      { id: 1, text: 'Sample Note' }
-    ],
-    nextId: 2
+    // An array to store all notes
+    notes: []
   }),
   actions: {
-    // 2. Add a new note with custom text
-    addNote(text = 'New Note') {
-      this.notes.push({
-        id: this.nextId,
-        text
-      })
-      this.nextId++
+    // Adds a new note to the state
+    addNote(note) {
+      this.notes.push(note)
     },
-
-    removeNote(id) {
+    // Initializes notes from IndexedDB (or any external data source)
+    loadNotes(notes) {
+      this.notes = notes
+    },
+    // Optional: Delete a note by its id
+    deleteNote(id) {
       this.notes = this.notes.filter(note => note.id !== id)
     },
-    
-
-    getAllNotes() {
-      return this.notes
+    // Optional: Update a note by merging new data into the existing note
+    updateNote(id, data) {
+      const index = this.notes.findIndex(note => note.id === id)
+      if (index !== -1) {
+        this.notes[index] = { ...this.notes[index], ...data }
+      }
+    }
+  },
+  getters: {
+    // Optional: Returns notes in reverse order (e.g., for reverse chronological display)
+    reversedNotes(state) {
+      return state.notes.slice().reverse()
     }
   }
 })
-// 3. Now you can import this store in components and use it
