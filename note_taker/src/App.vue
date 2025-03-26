@@ -1,11 +1,9 @@
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
-</script>
+
 
 <template>
   <nav class="navbar is-primary is-fixed-top">
     <div class="navbar-brand">
-      <a class="navbar-item has-text-white" href="/">📒 Note Taker</a>
+      <a class="navbar-item has-text-white" href="/">Note Taker</a>
     </div>
   </nav>
 

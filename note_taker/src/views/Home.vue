@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1 class="title">Your Notes</h1>
-    <button class="button is-primary" @click="addNote">➕ Add Note</button>
+    <button class="button is-primary" @click="addNote">Add Note</button>
 
     <div class="box" v-for="note in notes" :key="note.id">
       <p>{{ note.text }}</p>
