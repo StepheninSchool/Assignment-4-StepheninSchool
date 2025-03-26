@@ -3,19 +3,18 @@ import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <template>
-  <div id="app">
-    <nav class="navbar is-primary">
-      <div class="navbar-brand">
-        <a class="navbar-item has-text-white" href="/">📒 Note Taker</a>
-      </div>
-    </nav>
+  <nav class="navbar is-primary is-fixed-top">
+    <div class="navbar-brand">
+      <a class="navbar-item has-text-white" href="/">📒 Note Taker</a>
+    </div>
+  </nav>
 
-    <section class="section">
-      <div class="container">
-        <router-view />
-      </div>
-    </section>
-  </div>
+  <!-- Add top margin to avoid content sliding under the fixed navbar -->
+  <section class="section" style="margin-top: 3.25rem;">
+    <div class="container">
+      <router-view />
+    </div>
+  </section>
 </template>
 
 <script setup>
