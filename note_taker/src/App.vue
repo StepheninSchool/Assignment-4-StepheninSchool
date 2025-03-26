@@ -1,7 +1,3 @@
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
-</script>
-
 <template>
   <nav class="navbar is-primary is-fixed-top">
     <div class="navbar-brand">
