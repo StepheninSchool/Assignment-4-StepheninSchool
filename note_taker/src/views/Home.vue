@@ -17,4 +17,5 @@ const notes = ref([{ id: 1, text: 'Sample Note' }]);
 const addNote = () => {
   notes.value.push({ id: notes.value.length + 1, text: 'New Note' });
 };
+
 </script>
