@@ -1,4 +1,4 @@
-# Assignment-4-StepheninSchool
+# Emerging Tech - Final Assigment 
 Offline Notes App built with Vue.js, Pinia, Bulma, and IndexedDB – a simple PWA for taking and storing notes offline.
 
 ---
@@ -57,9 +57,8 @@ npm run dev
 GitHub: [@StepheninSchool](https://github.com/StepheninSchool)
 
 **Mai Ibrahim**
-GitHub: 
-[mai please insert your github like above]
+GitHub: [@Mai](https://github.com/W0496269)
 
 **Jacob Poirier**
-GitHub: 
-[Jacob do the same]
+GitHub: [@Uncreative01](https://github.com/Uncreative01)
+
