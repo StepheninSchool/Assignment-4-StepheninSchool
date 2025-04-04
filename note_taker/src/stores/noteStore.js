@@ -1,35 +1,24 @@
-import { defineStore } from 'pinia'
+import { defineStore } from 'pinia';
+import { addNoteToDB, getAllNotesFromDB, deleteNoteFromDB } from '../utils/indexedDB';
 
 export const useNoteStore = defineStore('noteStore', {
   state: () => ({
-    // An array to store all notes
-    notes: []
+    notes: [], // Array to store notes
   }),
   actions: {
-    // Adds a new note to the state
-    addNote(note) {
-      this.notes.push(note)
+    async loadNotes() {
+      // Load notes from IndexedDB
+      this.notes = await getAllNotesFromDB();
     },
-    // Initializes notes from IndexedDB (or any external data source)
-    loadNotes(notes) {
-      this.notes = notes
+    async addNote(note) {
+      // Add note to IndexedDB and update state
+      await addNoteToDB(note);
+      this.notes.push(note);
     },
-    // Optional: Delete a note by its id
-    deleteNote(id) {
-      this.notes = this.notes.filter(note => note.id !== id)
+    async deleteNote(id) {
+      // Delete note from IndexedDB and update state
+      await deleteNoteFromDB(id);
+      this.notes = this.notes.filter((note) => note.id !== id);
     },
-    // Optional: Update a note by merging new data into the existing note
-    updateNote(id, data) {
-      const index = this.notes.findIndex(note => note.id === id)
-      if (index !== -1) {
-        this.notes[index] = { ...this.notes[index], ...data }
-      }
-    }
   },
-  getters: {
-    // Optional: Returns notes in reverse order (e.g., for reverse chronological display)
-    reversedNotes(state) {
-      return state.notes.slice().reverse()
-    }
-  }
-})
+});
