@@ -36,6 +36,11 @@
         class="button is-primary"
         @click="showAddForm = true"
       >
+        <img
+          src="/icons/notes-svgrepo-com.svg"
+          alt="New Note Icon"
+          style="height: 1em; margin-right: 0.5em;"
+        />
         New Note
       </button>
     </div>
