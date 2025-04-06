@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h1 class="title has-text-centered">Notes</h1>
+    <h1 class="title has-text-centered">Your Generic Notes</h1>
     <div class="columns is-multiline">
       <div class="column is-one-third" v-for="note in notes" :key="note.id">
         <div class="card" @click="toggleExpand(note.id)">
