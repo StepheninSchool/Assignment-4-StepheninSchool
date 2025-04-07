@@ -70,12 +70,13 @@ npm run dev
 ```
 
 > Local development server starts at: `http://localhost:5173/`
-Key Files:
-- vite.config.js: Configures Vite and sets up the PWA plugin with Workbox.
-- src/utils/indexedDB.js: Handles all IndexedDB operations for storing, retrieving, and deleting notes.
-- src/stores/noteStore.js: Manages the state of notes using Pinia.
-- src/views/Home.vue: The main view where notes are displayed and managed.
-- src/style.css: Contains custom styles for the app.
+---
+**Key Files:**
+- vite.config.js: `Configures Vite and sets up the PWA plugin with Workbox.`
+- src/utils/indexedDB.js: `Handles all IndexedDB operations for storing, retrieving, and deleting notes.`
+- src/stores/noteStore.js: `Manages the state of notes using Pinia.`
+- src/views/Home.vue: `The main view where notes are displayed and managed.`
+- src/style.css: `Contains custom styles for the app.`
 ---
 **Additional Notes**
  - Icons: The app uses icons from the public/icons folder for branding and UI elements.
