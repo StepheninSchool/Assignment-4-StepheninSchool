@@ -16,20 +16,20 @@ This app is ideal for users looking for a lightweight, offline-capable note-taki
 
 | Technology         | Purpose                                            |
 |--------------------|----------------------------------------------------|
-| **Vue.js**         | Frontend framework for building reactive UI        |
-| **Pinia**          | State management for the notes system              |
-| **Bulma**          | CSS framework for clean, responsive styling        |
-| **IndexedDB**      | Client-side database for offline storage           |
-| **Workbox**        | Service worker setup for PWA support and caching   |
-| **Vite Plugin PWA**| Enables Progressive Web App (PWA) features of Workbox |
-| **JavaScript**     | Logic and functionality                            |
-| **Vite**           | Build tool and development server                 |
+| **Vue.js**         | `Frontend framework for building reactive UI  `      |
+| **Pinia**          | `State management for the notes system `             |
+| **Bulma**          | `CSS framework for clean, responsive styling  `      |
+| **IndexedDB**      |` Client-side database for offline storage `          |
+| **Workbox**        | `Service worker setup for PWA support and caching`   |
+| **Vite Plugin PWA**| `Enables Progressive Web App (PWA) features of Workbox` |
+| **JavaScript**     | `Logic and functionality `                           |
+| **Vite**           | `Build tool and development server `                |
 
 ---
 
 ## Features
 
-1. **Responsive Design**: The app is styled using Bulma, ensuring it works well on all screen sizes.
+1. **Responsive Design**: `The app is styled using Bulma, ensuring it works well on all screen sizes.
 2. **Offline Functionality**: Notes are stored in IndexedDB, allowing users to access and manage them without an internet connection.
 3. **Progressive Web App (PWA)**: The app can be installed on devices and used like a native app, thanks to Workbox and `vite-plugin-pwa`.
 4. **Dynamic State Management**: Pinia manages the state of notes efficiently.
@@ -68,48 +68,53 @@ npm install
 ```bash
 npm run dev
 ```
-##Folder Structure**
+> Local development server starts at: `http://localhost:5173/`
+---
+
+## Folder Structure
 ```bash
 .gitignore
-[index.html](http://_vscodecontentref_/0)
-[package.json](http://_vscodecontentref_/1)
-[README.md](http://_vscodecontentref_/2)
-[vite.config.js](http://_vscodecontentref_/3)
+[index.html]
+[package.json]
+[README.md]
+[vite.config.js]
 .vscode/
-    [extensions.json](http://_vscodecontentref_/4)
+    [extensions.json]
 public/
     icons/
         app-development.png
         notes-svgrepo-com.svg
-src/
-    [App.vue](http://_vscodecontentref_/5)
-    [main.js](http://_vscodecontentref_/6)
-    [router.js](http://_vscodecontentref_/7)
-    [style.css](http://_vscodecontentref_/8)
+**src/**
+    [App.vue]
+    [main.js]
+    [router.js]
+    [style.css]
     assets/
         vue.svg
     stores/
-        [noteStore.js](http://_vscodecontentref_/9)
+        [noteStore.js]
     utils/
-        [indexedDB.js](http://_vscodecontentref_/10)
+        [indexedDB.js]
     views/
-        [Home.vue](http://_vscodecontentref_/11)
+        [Home.vue]
 ```
-
-> Local development server starts at: `http://localhost:5173/`
+## Deployment
+```
+The app is deployed as an Azure Static Web App. To deploy updates, push changes to the repository's main branch. Azure Static Web Apps automatically builds and deploys the app.
+```
 ---
 **Key Files:**
-- vite.config.js: `Configures Vite and sets up the PWA plugin with Workbox.`
-- src/utils/indexedDB.js: `Handles all IndexedDB operations for storing, retrieving, and deleting notes.`
-- src/stores/noteStore.js: `Manages the state of notes using Pinia.`
-- src/views/Home.vue: `The main view where notes are displayed and managed.`
-- src/style.css: `Contains custom styles for the app.`
+- **vite.config.js:** `Configures Vite and sets up the PWA plugin with Workbox.`
+- **src/utils/indexedDB.js:** `Handles all IndexedDB operations for storing, retrieving, and deleting notes.`
+- **src/stores/noteStore.js:** `Manages the state of notes using Pinia.`
+- **src/views/Home.vue:** `The main view where notes are displayed and managed.`
+- **src/style.css:** `Contains custom styles for the app.`
 ---
-**Additional Notes**
- - Icons: `The app uses icons from the public/icons folder for branding and UI elements.`
- - Browser Compatibility: `The app is designed to work on modern browsers that support IndexedDB and service workers.`
-- PWA Installation: `Users can install the app on their devices by clicking "Add to Home Screen" in supported browsers.`
-- Future Improvements: `Features like note categorization, search functionality, and cloud sync can be added in future updates.`
+## Additional Notes
+ - **Icons:** `The app uses icons from the public/icons folder for branding and UI elements.`
+ - **Browser Compatibility:** `The app is designed to work on modern browsers that support IndexedDB and service workers.`
+- **PWA Installation:** `Users can install the app on their devices by clicking "Add to Home Screen" in supported browsers.`
+- **Future Improvements:** `note categorization, search functionality, and cloud sync will be added in future updates.`
 ---
 ## Authors
 
