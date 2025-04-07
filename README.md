@@ -106,7 +106,7 @@ public/
 > https://delightful-grass-01593c510.6.azurestaticapps.net
 ---
 ## Installation
->1. Open the app in your browser (chrome, edge or other chromium browser) `https://delightful-grass-01593c510.6.azurestaticapps.net/`
+>1. Open the app in your browser (Chrome, Edge or other Chromium browser) > https://delightful-grass-01593c510.6.azurestaticapps.net/
 >2. Click the `...`, look for `install` or `install page as app`.
 >3. The app will be installed as a standalone app in your app menu.
 ---
