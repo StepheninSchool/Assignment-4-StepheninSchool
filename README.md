@@ -7,7 +7,7 @@ This app, **Generic Note Taker (GNT)**, is a simple and intuitive note-taking ap
 - **Edit Notes**: Update the title and content of existing notes.
 - **Delete Notes**: Remove unwanted notes with ease.
 - **Offline Support**: Access and manage notes without an internet connection.
-- **PWA Installation**: Can be installed as a standalone app with chromium browsers.
+- **PWA Installation**: It can be installed as a standalone app with Chrome browsers.
 
 This app is ideal for users looking for a lightweight, offline-capable note-taking solution.
 
@@ -30,11 +30,11 @@ This app is ideal for users looking for a lightweight, offline-capable note-taki
 
 ## Other Features
 
-1. **Responsive Design**: `The app is styled using Bulma, ensuring it works well on all screen sizes.
-2. **Offline Functionality**: Notes are stored in IndexedDB, allowing users to access and manage them without an internet connection.
-3. **Progressive Web App (PWA)**: The app can be installed on devices and used like a native app, thanks to Workbox and `vite-plugin-pwa`.
-4. **Dynamic State Management**: Pinia manages the state of notes efficiently.
-5. **Modern Development Stack**: This stack is built with Vue 3 and Vite for fast development and optimized builds.
+- **Responsive Design**: `The app is styled using Bulma, ensuring it works well on all screen sizes.
+- **Offline Functionality**: Notes are stored in IndexedDB, allowing users to access and manage them without an internet connection.
+- **Progressive Web App (PWA)**: The app can be installed on devices and used like a native app, thanks to Workbox and `vite-plugin-pwa`.
+- **Dynamic State Management**: Pinia manages the state of notes efficiently.
+- **Modern Development Stack**: This stack is built with Vue 3 and Vite for fast development and optimized builds.
 
 ---
 
