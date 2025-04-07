@@ -27,15 +27,11 @@ This app is ideal for users looking for a lightweight, offline-capable note-taki
 | **Vite**           | `Build tool and development server `                |
 
 ---
-
-## Other Features
-
 - **Responsive Design**: `The app is styled using Bulma, ensuring it works well on all screen sizes.
 - **Offline Functionality**: Notes are stored in IndexedDB, allowing users to access and manage them without an internet connection.
 - **Progressive Web App (PWA)**: The app can be installed on devices and used like a native app, thanks to Workbox and `vite-plugin-pwa`.
 - **Dynamic State Management**: Pinia manages the state of notes efficiently.
 - **Modern Development Stack**: This stack is built with Vue 3 and Vite for fast development and optimized builds.
-
 ---
 
 ## Project Setup
