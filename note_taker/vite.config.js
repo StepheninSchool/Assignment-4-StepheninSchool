@@ -13,12 +13,17 @@ export default defineConfig({
         theme_color: '#ffffff',
         icons: [
           {
-            src: '/icons/app-development.png',
+            src: '/icons/notes-svgrepo-com192.svg',
             sizes: '192x192',
+            type: 'image/svg',
+          },
+          {
+            src: '/icons/notes-svgrepo-com256.svg',
+            sizes: '256x256',
             type: 'image/png',
           },
           {
-            src: '/icons/app-development2.png',
+            src: '/icons/notes-svgrepo-com512.svg',
             sizes: '512x512',
             type: 'image/png',
           },
