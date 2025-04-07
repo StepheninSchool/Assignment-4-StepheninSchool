@@ -7,6 +7,7 @@ This app, **Generic Note Taker (GNT)**, is a simple and intuitive note-taking ap
 - **Edit Notes**: Update the title and content of existing notes.
 - **Delete Notes**: Remove unwanted notes with ease.
 - **Offline Support**: Access and manage notes without an internet connection.
+- **Install on device**: Can install on your device
 
 This app is ideal for users looking for a lightweight, offline-capable note-taking solution.
 
@@ -103,7 +104,13 @@ public/
 > The app is deployed as an Azure Static Web App. To deploy updates, push changes to the repository's main branch. Azure Static Web Apps automatically builds and deploys the app.
 
 > https://delightful-grass-01593c510.6.azurestaticapps.net
-
+---
+## Installing the App as a PWA
+> **GNT** can be installed on your device!
+> **On Desktop (Google Chrome, Edge or other chromium based browsers):**
+> - 1. Open the app in your browser : https://delightful-grass-01593c510.6.azurestaticapps.net/
+>   2. Select the `...` usually in the top-right corner > cast,save and share > install page as app.
+>   3. The app will be installed as a standalone app ! Find it in your system menu !
 ---
 **Key Files:**
 - **vite.config.js:** `Configures Vite and sets up the PWA plugin with Workbox.`
