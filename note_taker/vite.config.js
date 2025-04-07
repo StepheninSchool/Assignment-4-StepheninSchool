@@ -18,12 +18,12 @@ export default defineConfig({
             type: 'image/svg',
           },
           {
-            src: '/icons/notes-svgrepo-com256.svg',
+            src: '/icons/notes-svgrepo-com256.png',
             sizes: '256x256',
             type: 'image/png',
           },
           {
-            src: '/icons/notes-svgrepo-com512.svg',
+            src: '/icons/notes-svgrepo-com512.png',
             sizes: '512x512',
             type: 'image/png',
           },
