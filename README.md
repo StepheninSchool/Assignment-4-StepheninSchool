@@ -28,7 +28,7 @@ This app is ideal for users looking for a lightweight, offline-capable note-taki
 
 ---
 
-## Features
+## Other Features
 
 1. **Responsive Design**: `The app is styled using Bulma, ensuring it works well on all screen sizes.
 2. **Offline Functionality**: Notes are stored in IndexedDB, allowing users to access and manage them without an internet connection.
