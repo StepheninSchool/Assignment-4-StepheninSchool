@@ -99,9 +99,11 @@ public/
         [Home.vue]
 ```
 ## Deployment
-```
-The app is deployed as an Azure Static Web App. To deploy updates, push changes to the repository's main branch. Azure Static Web Apps automatically builds and deploys the app.
-```
+
+> The app is deployed as an Azure Static Web App. To deploy updates, push changes to the repository's main branch. Azure Static Web Apps automatically builds and deploys the app.
+
+> https://delightful-grass-01593c510.6.azurestaticapps.net
+
 ---
 **Key Files:**
 - **vite.config.js:** `Configures Vite and sets up the PWA plugin with Workbox.`
