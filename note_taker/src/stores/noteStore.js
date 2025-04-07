@@ -28,5 +28,14 @@ export const useNoteStore = defineStore('noteStore', {
       await deleteNoteFromDB(id);
       this.notes = this.notes.filter((note) => note.id !== id);
     },
+    async editNote(updatedNote) {
+      // Update the note in IndexedDB
+      await addNoteToDB(updatedNote); // `addNoteToDB` will overwrite the note with the same `id`
+      // Update the note in the local state
+      const index = this.notes.findIndex((note) => note.id === updatedNote.id);
+      if (index !== -1) {
+        this.notes[index] = updatedNote;
+      }
+    },
   },
 });

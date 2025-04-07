@@ -54,4 +54,6 @@ export const deleteNoteFromDB = async (id) => {
     console.error('Failed to delete note from IndexedDB:', error);
     throw error; // Re-throw the error for further handling
   }
+
+  
 };
