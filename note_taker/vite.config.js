@@ -7,15 +7,15 @@ export default defineConfig({
     VitePWA({
       registerType: 'autoUpdate',
       manifest: {
-        name: 'Note Taker',
-        short_name: 'Notes',
+        name: 'Generic Note Taker',
+        short_name: 'GNT',
         description: 'Offline Notes App',
         theme_color: '#ffffff',
         icons: [
           {
-            src: '/icons/notes-svgrepo-com192.svg',
+            src: '/icons/notes-svgrepo-com192.png',
             sizes: '192x192',
-            type: 'image/svg',
+            type: 'image/png',
           },
           {
             src: '/icons/notes-svgrepo-com256.png',
