@@ -68,6 +68,33 @@ npm install
 ```bash
 npm run dev
 ```
+##Folder Structure**
+```bash
+.gitignore
+[index.html](http://_vscodecontentref_/0)
+[package.json](http://_vscodecontentref_/1)
+[README.md](http://_vscodecontentref_/2)
+[vite.config.js](http://_vscodecontentref_/3)
+.vscode/
+    [extensions.json](http://_vscodecontentref_/4)
+public/
+    icons/
+        app-development.png
+        notes-svgrepo-com.svg
+src/
+    [App.vue](http://_vscodecontentref_/5)
+    [main.js](http://_vscodecontentref_/6)
+    [router.js](http://_vscodecontentref_/7)
+    [style.css](http://_vscodecontentref_/8)
+    assets/
+        vue.svg
+    stores/
+        [noteStore.js](http://_vscodecontentref_/9)
+    utils/
+        [indexedDB.js](http://_vscodecontentref_/10)
+    views/
+        [Home.vue](http://_vscodecontentref_/11)
+```
 
 > Local development server starts at: `http://localhost:5173/`
 ---
@@ -79,10 +106,11 @@ npm run dev
 - src/style.css: `Contains custom styles for the app.`
 ---
 **Additional Notes**
- - Icons: The app uses icons from the public/icons folder for branding and UI elements.
- - Browser Compatibility: The app is designed to work on modern browsers that support IndexedDB and service workers.
-- PWA Installation: Users can install the app on their devices by clicking "Add to Home Screen" in supported browsers.
-- Future Improvements: Features like note categorization, search functionality, and cloud sync can be added in future updates.
+ - Icons: `The app uses icons from the public/icons folder for branding and UI elements.`
+ - Browser Compatibility: `The app is designed to work on modern browsers that support IndexedDB and service workers.`
+- PWA Installation: `Users can install the app on their devices by clicking "Add to Home Screen" in supported browsers.`
+- Future Improvements: `Features like note categorization, search functionality, and cloud sync can be added in future updates.`
+---
 ## Authors
 
 **Stephen Landrigan**  
