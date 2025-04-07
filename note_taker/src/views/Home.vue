@@ -124,22 +124,23 @@ export default {
 
     // Function to confirm and add a new note
     const confirmAddNote = async () => {
-      // Ensure both title and content are provided
-      if (newNoteTitle.value.trim() && newNoteContent.value.trim()) {
-        const newNote = {
-          id: Date.now(), // Use current timestamp as a unique ID
-          title: newNoteTitle.value,
-          content: newNoteContent.value,
-          createdAt: new Date().toLocaleString(), // Record the creation time
-        };
-        // Add the new note using the note store
-        await noteStore.addNote(newNote);
-        // Clear the input fields and hide the add note form
-        newNoteTitle.value = '';
-        newNoteContent.value = '';
-        showAddForm.value = false;
-      }
+  if (newNoteTitle.value.trim() && newNoteContent.value.trim()) {
+    const newNote = {
+      id: Date.now(), // Use current timestamp as a unique ID
+      title: newNoteTitle.value,
+      content: newNoteContent.value,
+      createdAt: new Date().toLocaleString(), // Record the creation time
     };
+
+    // Add the new note using the note store
+    await noteStore.addNote(newNote);
+
+    // Clear the input fields and hide the add note form
+    newNoteTitle.value = '';
+    newNoteContent.value = '';
+    showAddForm.value = false;
+  }
+};
 
     // Function to cancel adding a new note
     const cancelAddNote = () => {

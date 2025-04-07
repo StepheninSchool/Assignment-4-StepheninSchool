@@ -11,9 +11,17 @@ export const useNoteStore = defineStore('noteStore', {
       this.notes = await getAllNotesFromDB();
     },
     async addNote(note) {
-      // Add note to IndexedDB and update state
-      await addNoteToDB(note);
-      this.notes.push(note);
+      // Ensure the note object includes all necessary fields
+      const newNote = {
+        id: note.id || Date.now(), // Generate a unique ID if not provided
+        title: note.title,
+        content: note.content,
+        createdAt: note.createdAt || new Date().toLocaleString(), // Add timestamp if not provided
+      };
+    
+      // Add the note to IndexedDB and update the state
+      await addNoteToDB(newNote);
+      this.notes.push(newNote);
     },
     async deleteNote(id) {
       // Delete note from IndexedDB and update state
