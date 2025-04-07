@@ -8,15 +8,25 @@ export const useNoteStore = defineStore('noteStore', {
   actions: {
     async loadNotes() {
       // Load notes from IndexedDB
-      this.notes = await getAllNotesFromDB();
+      const loadedNotes = await getAllNotesFromDB();
+    
+      // Assign a random color to notes that don't already have one
+      this.notes = loadedNotes.map((note) => ({
+        ...note,
+        color: note.color || `#${Math.floor(Math.random() * 16777215).toString(16)}`,
+      }));
     },
     async addNote(note) {
+      // Generate a random color
+      const randomColor = `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+    
       // Ensure the note object includes all necessary fields
       const newNote = {
         id: note.id || Date.now(), // Generate a unique ID if not provided
         title: note.title,
         content: note.content,
         createdAt: note.createdAt || new Date().toLocaleString(), // Add timestamp if not provided
+        color: randomColor, // Assign a random color
       };
     
       // Add the note to IndexedDB and update the state

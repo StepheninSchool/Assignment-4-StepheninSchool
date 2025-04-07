@@ -10,7 +10,7 @@
         <div class="card" @click="toggleExpand(note.id)">
           <div class="card-content">
             <!-- Note title and timestamp -->
-            <p class="title is-4">{{ note.title }}</p>
+            <p class="title is-4" :style="{ color: note.color }">{{ note.title }}</p>
             <p class="subtitle is-6">{{ note.createdAt }}</p>
             
             <!-- Expanded section: visible when the card is clicked -->
