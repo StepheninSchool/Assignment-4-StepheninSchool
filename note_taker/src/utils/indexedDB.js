@@ -27,13 +27,12 @@ export const initDB = async () => {
 export const addNoteToDB = async (note) => {
   try {
     const db = await initDB();
-    await db.add(STORE_NAME, note);
+    await db.put(STORE_NAME, note); // Use `put` instead of `add` to allow updates
   } catch (error) {
-    console.error('Failed to add note to IndexedDB:', error);
+    console.error('Failed to add or update note in IndexedDB:', error);
     throw error; // Re-throw the error for further handling
   }
 };
-
 // Get all notes from the IndexedDB database
 export const getAllNotesFromDB = async () => {
   try {
@@ -54,6 +53,24 @@ export const deleteNoteFromDB = async (id) => {
     console.error('Failed to delete note from IndexedDB:', error);
     throw error; // Re-throw the error for further handling
   }
-
-  
 };
+
+export const editNote = async (note) => {
+    // Use prompt dialogs to get new title and content from the user
+    const newTitle = prompt("Edit title:", note.title);
+    const newContent = prompt("Edit content:", note.content);
+  
+    // Check if valid changes are made before updating
+    if (
+      newTitle &&
+      newTitle.trim() !== "" &&
+      newContent &&
+      newContent.trim() !== "" &&
+      (newTitle !== note.title || newContent !== note.content)
+    ) {
+      const updatedNote = { ...note, title: newTitle, content: newContent };
+  
+      // Call the store's editNote method to persist the changes
+      await noteStore.editNote(updatedNote);
+    }
+  };

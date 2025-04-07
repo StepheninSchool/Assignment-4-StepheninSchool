@@ -159,21 +159,24 @@ export default {
 
     // Function to edit a note
     const editNote = async (note) => {
-      // Use prompt dialogs to get new title and content from the user
-      const newTitle = prompt("Edit title:", note.title);
-      const newContent = prompt("Edit content:", note.content);
-      // Check if valid changes are made before updating
-      if (
-        newTitle &&
-        newTitle.trim() !== "" &&
-        newContent &&
-        newContent.trim() !== "" &&
-        (newTitle !== note.title || newContent !== note.content)
-      ) {
-        const updatedNote = { ...note, title: newTitle, content: newContent };
-        await noteStore.editNote(updatedNote);
-      }
-    };
+  // Use prompt dialogs to get new title and content from the user
+  const newTitle = prompt("Edit title:", note.title);
+  const newContent = prompt("Edit content:", note.content);
+
+  // Check if valid changes are made before updating
+  if (
+    newTitle &&
+    newTitle.trim() !== "" &&
+    newContent &&
+    newContent.trim() !== "" &&
+    (newTitle !== note.title || newContent !== note.content)
+  ) {
+    const updatedNote = { ...note, title: newTitle, content: newContent };
+
+    // Call the store's editNote method to persist the changes
+    await noteStore.editNote(updatedNote);
+  }
+};
 
     // Function to toggle the expanded view of a note card
     const toggleExpand = (id) => {
