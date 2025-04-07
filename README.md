@@ -1,5 +1,13 @@
 # Emerging Tech - Final Assigment 
-Offline Notes App built with Vue.js, Pinia, Bulma, and IndexedDB – a simple PWA for taking and storing notes offline.
+This app, **Generic Note Taker (GNT)**, is a simple and intuitive note-taking application built with Vue 3 and Vite. It allows users to create, view, edit, and delete notes. The app features a responsive design, making it accessible on various devices. Notes are stored locally using IndexedDB, enabling offline functionality. Key features include:
+
+- **Add Notes**: Create new notes with a title and content.
+- **View Notes**: Display notes in a card-based layout with expandable details.
+- **Edit Notes**: Update the title and content of existing notes.
+- **Delete Notes**: Remove unwanted notes with ease.
+- **Offline Support**: Access and manage notes without an internet connection.
+
+This app is ideal for users looking for a lightweight, offline-capable note-taking solution.
 
 ---
 
@@ -12,6 +20,7 @@ Offline Notes App built with Vue.js, Pinia, Bulma, and IndexedDB – a simple PW
 | **Bulma**     | CSS framework for clean, responsive styling        |
 | **IndexedDB** | Client-side database for offline storage           |
 | **Workbox**   | Service worker setup for PWA support and caching   |
+| **Vite Plugin PWA** | Enables Progressive Web App (PWA) features   |
 
 ---
 
