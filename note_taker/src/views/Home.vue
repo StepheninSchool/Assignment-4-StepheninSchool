@@ -124,23 +124,23 @@ export default {
 
     // Function to confirm and add a new note
     const confirmAddNote = async () => {
-  if (newNoteTitle.value.trim() && newNoteContent.value.trim()) {
-    const newNote = {
-      id: Date.now(), // Use current timestamp as a unique ID
-      title: newNoteTitle.value,
-      content: newNoteContent.value,
-      createdAt: new Date().toLocaleString(), // Record the creation time
+      if (newNoteTitle.value.trim() && newNoteContent.value.trim()) {
+        const newNote = {
+          id: Date.now(), // Use current timestamp as a unique ID
+          title: newNoteTitle.value,
+          content: newNoteContent.value,
+          createdAt: new Date().toLocaleString(), // Record the creation time
+        };
+
+        // Add the new note using the note store
+        await noteStore.addNote(newNote);
+
+        // Clear the input fields and hide the add note form
+        newNoteTitle.value = '';
+        newNoteContent.value = '';
+        showAddForm.value = false;
+      }
     };
-
-    // Add the new note using the note store
-    await noteStore.addNote(newNote);
-
-    // Clear the input fields and hide the add note form
-    newNoteTitle.value = '';
-    newNoteContent.value = '';
-    showAddForm.value = false;
-  }
-};
 
     // Function to cancel adding a new note
     const cancelAddNote = () => {
@@ -159,24 +159,24 @@ export default {
 
     // Function to edit a note
     const editNote = async (note) => {
-  // Use prompt dialogs to get new title and content from the user
-  const newTitle = prompt("Edit title:", note.title);
-  const newContent = prompt("Edit content:", note.content);
+      // Use prompt dialogs to get new title and content from the user
+      const newTitle = prompt("Edit title:", note.title);
+      const newContent = prompt("Edit content:", note.content);
 
-  // Check if valid changes are made before updating
-  if (
-    newTitle &&
-    newTitle.trim() !== "" &&
-    newContent &&
-    newContent.trim() !== "" &&
-    (newTitle !== note.title || newContent !== note.content)
-  ) {
-    const updatedNote = { ...note, title: newTitle, content: newContent };
+      // Check if valid changes are made before updating
+      if (
+        newTitle &&
+        newTitle.trim() !== "" &&
+        newContent &&
+        newContent.trim() !== "" &&
+        (newTitle !== note.title || newContent !== note.content)
+      ) {
+        const updatedNote = { ...note, title: newTitle, content: newContent };
 
-    // Call the store's editNote method to persist the changes
-    await noteStore.editNote(updatedNote);
-  }
-};
+        // Call the store's editNote method to persist the changes
+        await noteStore.editNote(updatedNote);
+      }
+    };
 
     // Function to toggle the expanded view of a note card
     const toggleExpand = (id) => {
@@ -199,3 +199,4 @@ export default {
   },
 };
 </script>
+
